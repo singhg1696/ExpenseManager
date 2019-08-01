@@ -1,8 +1,10 @@
-package com.example.expensemanager;
+package com.example.expensemanager.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.expensemanager.R;
 
 public class LoginActivity extends AppCompatActivity {
 
