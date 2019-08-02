@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.SplashActivity">
+    tools:context=".view.SplashActivity"
+    android:background="@drawable/universal_bg">
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,12 +31,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:background="#FAFAFA"
-        android:backgroundTint="#FAFAFA"
         android:fontFamily="@font/atomic_age"
         android:text="Expense Manager"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#039BE5"
+        android:textColor="#00B3EA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         setBtnLogin(btnLogin);
-       }
+    }
 
     public void setBtnLogin(Button btnLogin) {
         this.btnLogin = btnLogin;
@@ -49,19 +49,19 @@ public class LoginActivity extends AppCompatActivity {
                 String emailAddress = txtEmail.getText().toString().trim();
                 if (txtPass.getText().toString().length() < 6) {
                     txtPass.setError("password minimum contain 6 character");
-                            txtPass.requestFocus();
+                    txtPass.requestFocus();
                 }
                 if (txtPass.getText().toString().equals("")) {
                     txtPass.setError("please enter password");
-                            txtPass.requestFocus();
+                    txtPass.requestFocus();
                 }
                 if (!android.util.Patterns.EMAIL_ADDRESS.matcher(emailAddress).matches()) {
                     txtEmail.setError("please enter valid email address");
-                            txtEmail.requestFocus();
+                    txtEmail.requestFocus();
                 }
                 if (txtEmail.getText().toString().equals("")) {
                     txtEmail.setError("please enter email address");
-                            txtEmail.requestFocus();
+                    txtEmail.requestFocus();
                 }
                 if (!emailAddress.equals("") &&
                         txtPass.getText().toString().length() >= 6 &&
@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         String e = user.getEmail();
                                         Log.d("tettedtuedte00000f", e);
-                                        Toast.makeText(LoginActivity.this,"theek aa",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(LoginActivity.this, "theek aa", Toast.LENGTH_LONG).show();
 
                                     } else {
                                         // If sign in fails, display a message to the user.
@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    /*
+/*
 
 
  */
