@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:padding="10dp"
         android:orientation="horizontal">
 
@@ -18,9 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:fontFamily="sans-serif-light"
-            android:text="Not a Member Yet ?"
+            android:text="@string/user_is_not_member_yet"
             android:textColor="#FFFFFF"
-            android:textSize="19dp" />
+            android:textSize="19sp" />
 
         <Button
             android:id="@+id/btnSignUp"
@@ -28,11 +28,11 @@
             android:layout_height="42dp"
             android:background="?android:attr/selectableItemBackground"
             android:fontFamily="casual"
-            android:layout_marginLeft="5dp"
-            android:text="Sign Up"
+            android:layout_marginStart="5dp"
+            android:text="@string/sign_up"
             android:padding="5dp"
             android:textColor="#ffffff"
-            android:textSize="21dp" />
+            android:textSize="21sp" />
 
     </LinearLayout>
 
@@ -49,17 +49,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="All in One"
+            android:text="@string/App_Name"
             android:textColor="#ffffff"
-            android:textSize="50dp" />
+            android:textSize="50sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:text="Expense Manager"
+            android:text="@string/App_Name_Part"
             android:textColor="#ffffff"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
 
@@ -67,50 +67,65 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="60dp"
             android:orientation="vertical"
             android:padding="20dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittext_universal"
-                android:hint="User Name"
+                android:hint="@string/user_name"
                 android:padding="5dp"
                 android:inputType="textEmailAddress"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textColor="#000000"
-                android:text="ecbvejch" />
+                android:autofillHints="@string/user_name" />
 
 
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:id="@+id/txtPass"
                 android:background="@drawable/edittext_universal"
-                android:hint="Passworde"
+                android:hint="@string/password"
                 android:padding="5dp"
-                android:layout_below="@+id/txtEmail"
                 android:layout_marginTop="10dp"
                 android:inputType="textPassword"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textColor="#000000"
-                android:text="ecbvejch" />
+                android:autofillHints="@string/password" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/chkboxRememberMe"
+                    android:buttonTint="#ffffff"
+                    android:checked="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="@string/remember_me"/>
+
+            </LinearLayout>
 
 
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:height="40dp"
-                android:layout_marginTop="10dp"
-                android:textSize="18dp"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtPass"
-                android:layout_centerInParent="true"
                 android:background="@drawable/edittext_universal"
-                android:text="Login" />
+                android:text="@string/login" />
 
 
         </LinearLayout>

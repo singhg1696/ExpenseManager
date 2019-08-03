@@ -2,4 +2,12 @@
     <string name="app_name">Expense Manager</string>
     <string name="fire">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="user_is_not_member_yet">Not a Member Yet ?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="App_Name">All in One</string>
+    <string name="App_Name_Part">Expense Manager</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="remember_me">Remember Me ?</string>
 </resources>
