@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             chkboxRememberMe.setChecked(true);
         }
         setBtnLogin(btnLogin);
+        setBtnSignUp(btnSignUp);
     }
 
     public void setBtnLogin(Button btnLogin) {
@@ -99,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                                         FirebaseUser user = mAuth.getCurrentUser();
 
                                         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                                        assert imm != null;
                                         imm.hideSoftInputFromWindow(txtEmail.getWindowToken(), 0);
 
 
@@ -130,6 +132,13 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void setBtnSignUp(Button btnSignUp) {
+        this.btnSignUp = btnSignUp;
+        Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

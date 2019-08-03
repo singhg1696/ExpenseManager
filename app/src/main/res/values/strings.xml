@@ -10,4 +10,9 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="remember_me">Remember Me ?</string>
+    <string name="name">Name</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="re_enter_password">Re-Enter Password</string>
+    <string name="sign_up_here">Sign Up Here</string>
 </resources>
