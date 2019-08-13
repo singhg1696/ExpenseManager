@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                                             loginPrefsEditor.commit();
                                         }
 
-                                        startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
+                                       // startActivity(new Intent(LoginActivity.this, WelcomeHomeActivity.class));
                                         LoginActivity.this.finish();
 
 
@@ -142,22 +142,3 @@ public class LoginActivity extends AppCompatActivity {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
- */
