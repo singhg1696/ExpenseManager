@@ -58,10 +58,10 @@ public class LoginActivity extends AppCompatActivity {
         if (saveLogin == true) {
             txtEmail.setText(loginPreferences.getString("username", ""));
             txtPass.setText(loginPreferences.getString("password", ""));
-            chkboxRememberMe.setChecked(true);
+            chkboxRememberMe.setChecked(false);
         }
         setBtnLogin(btnLogin);
-        setBtnSignUp(btnSignUp);
+        //setBtnSignUp(btnSignUp);
     }
 
     public void setBtnLogin(Button btnLogin) {
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                                             loginPrefsEditor.commit();
                                         }
 
-                                       // startActivity(new Intent(LoginActivity.this, WelcomeHomeActivity.class));
+                                       startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
                                         LoginActivity.this.finish();
 
 

@@ -2,6 +2,7 @@ package com.example.expensemanager.view;
 
 import android.os.Bundle;
 
+import com.example.expensemanager.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
