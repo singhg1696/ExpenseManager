@@ -1,8 +1,10 @@
 package com.example.expensemanager.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.expensemanager.R;
+import com.example.expensemanager.view.Navigation_Activities.CategoriesActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -90,7 +92,8 @@ public class WelcomeActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_categories) {
+            startActivity(new Intent(WelcomeActivity.this, CategoriesActivity.class));
 
         } else if (id == R.id.nav_tools) {
 
