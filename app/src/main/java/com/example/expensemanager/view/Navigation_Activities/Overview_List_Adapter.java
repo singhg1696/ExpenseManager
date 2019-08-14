@@ -1,4 +1,4 @@
-package com.example.expensemanager.Fragments;
+package com.example.expensemanager.view.Navigation_Activities;
 
 import android.content.Context;
 import android.view.View;
