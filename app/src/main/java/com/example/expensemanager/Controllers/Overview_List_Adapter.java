@@ -1,4 +1,4 @@
-package com.example.expensemanager.view.Navigation_Activities;
+package com.example.expensemanager.Controllers;
 
 import android.content.Context;
 import android.view.View;
@@ -50,7 +50,7 @@ public class Overview_List_Adapter extends BaseAdapter {
 
         txtName.setText(listOverview.get(position).getName());
         DecimalFormat precision = new DecimalFormat("0.00");
-        txtAmount.setText(precision.format(listOverview.get(position).getAmount()) + " CAD");
+        txtAmount.setText(precision.format(listOverview.get(position).getAmount()) + " Php");
         progressBar.setProgress(txtAmount.getAutoLinkMask());
         progressBar.setProgress(0);
         progressBar.setMax(100);

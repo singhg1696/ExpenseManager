@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Navigation_Activities.TabHistory_week"></activity>
-        <activity android:name=".view.Navigation_Activities.CategoriesActivity" />
+        <activity android:name=".view.Tab1"></activity>
+        <activity android:name=".view.Update_AddExpense" />
+        <activity android:name=".view.SettingsActivity" />
+        <activity android:name=".view.Tab2" />
+        <activity android:name=".view.Navigation_Activities.TabHistory_week" />
         <activity
             android:name=".view.WelcomeActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.SignUpActivity" />
-        <activity android:name=".view.LoginActivity" />
-        <activity android:name=".view.SplashActivity">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.SignUpActivity" />
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.SplashActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
