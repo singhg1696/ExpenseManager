@@ -12,7 +12,9 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -20,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.view.View;
 
 public class WelcomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -30,14 +33,14 @@ public class WelcomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_welcome);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-       /* FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(getApplicationContext(), Tab2.class));
+
             }
-        });*/
+        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,6 +49,7 @@ public class WelcomeActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        setTitle("Overview");
         Overview fragment = new Overview();
         androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
         androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -78,16 +82,7 @@ public class WelcomeActivity extends AppCompatActivity
         int id = item.getItemId();
         switch (item.getItemId()) {
             case R.id.add:
-                startActivity(new Intent(this, Tab2.class));
-                return true;
-
-            case R.id.archive:
-                startActivity(new Intent(this, SettingsActivity.class));
-                return true;
-
-
-            case R.id.exit:
-                finish();
+                startActivity(new Intent(this, LoginActivity.class));
                 return true;
         }
 

@@ -18,15 +18,18 @@
             android:name=".view.WelcomeActivity"
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".view.SignUpActivity" />
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.SplashActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".view.SignUpActivity" />
-        <activity android:name=".view.LoginActivity" />
-        <activity android:name=".view.SplashActivity" />
+        </activity>>
 
         <meta-data
             android:name="preloaded_fonts"

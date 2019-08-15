@@ -50,7 +50,7 @@ public class Overview_List_Adapter extends BaseAdapter {
 
         txtName.setText(listOverview.get(position).getName());
         DecimalFormat precision = new DecimalFormat("0.00");
-        txtAmount.setText(precision.format(listOverview.get(position).getAmount()) + " Php");
+        txtAmount.setText(precision.format(listOverview.get(position).getAmount()) + " CAD");
         progressBar.setProgress(txtAmount.getAutoLinkMask());
         progressBar.setProgress(0);
         progressBar.setMax(100);

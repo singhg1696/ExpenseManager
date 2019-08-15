@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             chkboxRememberMe.setChecked(false);
         }
         setBtnLogin(btnLogin);
-        //setBtnSignUp(btnSignUp);
+        setBtnSignUp(btnSignUp);
     }
 
     public void setBtnLogin(Button btnLogin) {
@@ -136,9 +136,14 @@ public class LoginActivity extends AppCompatActivity {
 
     public void setBtnSignUp(Button btnSignUp) {
         this.btnSignUp = btnSignUp;
-        Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
-        startActivity(intent);
-        finish();
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
 
