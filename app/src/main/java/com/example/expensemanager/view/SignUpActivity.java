@@ -2,6 +2,7 @@ package com.example.expensemanager.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -137,10 +138,11 @@ public class SignUpActivity extends AppCompatActivity {
 
                                         // Sign in success, update UI with the signed-in user's information
                                         UserDetails userDetails = new UserDetails(userName, userEmail, userContact);
-                                     FirebaseDatabase.getInstance().getReference("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser().getUid())).setValue(userDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        FirebaseDatabase.getInstance().getReference("UserDetails").child("users").setValue(userDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
+                                                    Log.d("Succesful","Sign Up completed");
                                                     Toast.makeText(SignUpActivity.this, "Done", Toast.LENGTH_LONG).show();
                                                 }
                                             }
@@ -163,11 +165,11 @@ public class SignUpActivity extends AppCompatActivity {
     public void setBtnBackToSignIn(Button btnBackToSignIn) {
         this.btnBackToSignIn = btnBackToSignIn;
         btnBackToSignIn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
-            startActivity(intent);
-        }
-    });
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
