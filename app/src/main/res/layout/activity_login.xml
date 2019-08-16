@@ -75,8 +75,9 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:background="@drawable/edittext_universal"
+            android:background="@drawable/edittextstyle"
             android:hint="@string/user_name"
+            android:textColorHint="#ffffff"
             android:padding="5dp"
             android:inputType="textEmailAddress"
             android:textSize="16sp"
@@ -88,9 +89,11 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:id="@+id/txtPass"
-            android:background="@drawable/edittext_universal"
+            android:background="@drawable/edittextstyle"
             android:hint="@string/password"
             android:padding="5dp"
+            android:textColorHint="#ffffff"
+
             android:layout_marginTop="10dp"
             android:inputType="textPassword"
             android:textSize="16sp"
@@ -123,8 +126,9 @@
             android:height="40dp"
             android:layout_marginTop="5dp"
             android:textSize="18sp"
+            android:textColor="#ffffff"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_universal"
+            android:background="@drawable/edittextstyle"
             android:text="@string/login" />
 
 
