@@ -27,16 +27,13 @@ import butterknife.ButterKnife;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    @BindView(R.id.txtName)
-    EditText txtName;
+
     @BindView(R.id.txtEmail)
     EditText txtEmail;
     @BindView(R.id.txtPass)
     EditText txtPass;
     @BindView(R.id.txtRepeatPass)
     EditText txtRepeatPass;
-    @BindView(R.id.txtPhoneNo)
-    EditText txtPhoneNo;
     @BindView(R.id.btnSignUp)
     Button btnSignUp;
     @BindView(R.id.btnBackToSignIn)
@@ -64,11 +61,9 @@ public class SignUpActivity extends AppCompatActivity {
 
                 mAuth = FirebaseAuth.getInstance();
 
-                final String userName = txtName.getText().toString().trim();
                 final String userEmail = txtEmail.getText().toString().trim();
                 String userPass = txtPass.getText().toString().trim();
                 String userRepeatPass = txtRepeatPass.getText().toString().trim();
-                final String userContact = txtPhoneNo.getText().toString().trim();
 
                 if (txtPass.getText().toString().length() < 6) {
                     txtPass.setError("password minimum contain 6 character");
@@ -94,28 +89,12 @@ public class SignUpActivity extends AppCompatActivity {
                     txtEmail.setError("please enter email address");
                     txtEmail.requestFocus();
                 }
-                if (txtName.getText().toString().equals("")) {
-                    txtName.setError("please enter your name");
-                    txtName.requestFocus();
-                }
-
-                if (txtPhoneNo.getText().toString().equals("")) {
-                    txtPhoneNo.setError("please enter your Contact Number");
-                    txtPhoneNo.requestFocus();
-                }
-
-                if (userContact.matches("[0-9]+")) {
-                    if (userContact.length() < 10) {
-                        userContact.length();
-                    }
-
-                }
                 if (!userPass.equals(userRepeatPass)) {
                     txtRepeatPass.setText("");
                     txtPass.setError("Password should be same");
                     txtPass.requestFocus();
                 }
-                if (!userEmail.equals("")/*
+            /*    if (!userEmail.equals("")*//*
                         && txtPass.getText().toString().length() >= 6
                         && !txtPass.getText().toString().trim().equals("")
                         && Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()
@@ -123,7 +102,7 @@ public class SignUpActivity extends AppCompatActivity {
                         && !txtName.getText().toString().trim().equals("")
                         && txtPass.equals(txtRepeatPass)
                         && userContact.matches("[0-9]+")
-                        && userContact.length() == 10*/) {
+                        && userContact.length() == 10*//*) {*/
 
                     Toast.makeText(SignUpActivity.this, "2", Toast.LENGTH_LONG).show();
 
@@ -137,19 +116,10 @@ public class SignUpActivity extends AppCompatActivity {
                                         Toast.makeText(SignUpActivity.this, "Done", Toast.LENGTH_LONG).show();
 
                                         // Sign in success, update UI with the signed-in user's information
-                                        UserDetails userDetails = new UserDetails(userName, userEmail, userContact);
-                                        FirebaseDatabase.getInstance().getReference("UserDetails").child("users").setValue(userDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    Log.d("Succesful","Sign Up completed");
-                                                    Toast.makeText(SignUpActivity.this, "Done", Toast.LENGTH_LONG).show();
-                                                }
-                                            }
-                                        });
+                                       startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                                     } else {
                                         // If sign in fails, display a message to the user.
-                                        Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                        Toast.makeText(SignUpActivity.this, "Failed to Save Credentials",
                                                 Toast.LENGTH_SHORT).show();
 
                                     }
@@ -157,7 +127,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     // ...
                                 }
                             });
-                }
+
             }
         });
     }
