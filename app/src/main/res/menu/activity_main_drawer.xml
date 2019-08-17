@@ -23,16 +23,17 @@
         <menu>
             <item
                 android:id="@+id/aboutUs"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/aboutusnav"
                 android:title="@string/about_us" />
             <item
                 android:id="@+id/contactUs"
-                android:icon="@drawable/ic_menu_send"
                 android:title="@string/contact_us" />
-            <item
-                android:id="@+id/logOut"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/logout" />
+
         </menu>
+    </item>
+    <item android:title="Exit">
+        <item
+            android:id="@+id/logOut"
+            android:title="@string/logout" />
     </item>
 </menu>
