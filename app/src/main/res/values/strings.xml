@@ -122,5 +122,8 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="not_a_member_yet">Not a Member Yet</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout">Logout</string>
 
 </resources>
