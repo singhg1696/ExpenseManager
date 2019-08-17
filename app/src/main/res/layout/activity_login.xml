@@ -81,7 +81,7 @@
             android:padding="5dp"
             android:inputType="textEmailAddress"
             android:textSize="16sp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:autofillHints="@string/user_name" />
 
 
@@ -97,7 +97,7 @@
             android:layout_marginTop="10dp"
             android:inputType="textPassword"
             android:textSize="16sp"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:autofillHints="@string/password" />
 
         <LinearLayout
