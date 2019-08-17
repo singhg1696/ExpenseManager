@@ -117,6 +117,9 @@ public class WelcomeActivity extends AppCompatActivity
         } else if (id == R.id.ItemSettings) {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 
+        } else if (id == R.id.logout) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
