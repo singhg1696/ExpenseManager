@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/expensebg"
+    android:layout_height="match_parent"
+    tools:context=".view.ContactUs">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleaboutus"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/App_Name_Part"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/titleaboutus"
+        android:id="@+id/descaboutus"
+        android:padding="20dp"
+        android:text="@string/expense_manager_application_is_mainly_in_use_to_calculate_daily_life_expenses_of_any_user_one_can_add_categories_add_and_edit_expenses_here_and_see_the_list_of_expenses_still_this_application_is_limited_to_smaller_scale_it_will_be_updated_soon_with_more_features"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:padding="20dp"
+        android:id="@+id/btncallaboutus"
+        android:layout_below="@+id/descaboutus"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonstyle"
+        android:text="Call Us"
+        android:layout_centerInParent="true"
+        android:textColor="#800000"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@+id/btncallaboutus"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonstyle"
+        android:text="Text Us"
+        android:id="@+id/btntextaboutus"
+        android:layout_centerInParent="true"
+        android:textColor="#800000"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/btnBodyMessage"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/btntextaboutus"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittextMessage"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:gravity="left|top"
+            android:background="@drawable/buttonstyle"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="6"
+            android:scrollbars="vertical" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnsendmessage"
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edittextMessage"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/buttonstyle"
+            android:text="Send Message" />
+
+    </RelativeLayout>
+</RelativeLayout>

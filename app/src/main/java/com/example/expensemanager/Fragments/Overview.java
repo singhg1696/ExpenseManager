@@ -66,10 +66,6 @@ public class Overview extends androidx.fragment.app.Fragment {
         DecimalFormat precision = new DecimalFormat("0.00 CAD");
         total.setText(precision.format(c.getInt(0)));
 
-        Log.d("Sum",(precision.format(c.getInt(0))));
-
-        Toast.makeText(getContext(), "????????"+total.toString()+">>>>>>>>>>>>>>>>", Toast.LENGTH_SHORT).show();
-        Log.d("Error",total.toString());
         return c;
     }
 

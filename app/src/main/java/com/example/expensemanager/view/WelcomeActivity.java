@@ -7,8 +7,6 @@ import com.example.expensemanager.Fragments.History;
 import com.example.expensemanager.Fragments.Overview;
 import com.example.expensemanager.R;
 
-import androidx.annotation.ColorInt;
-import androidx.annotation.ColorRes;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
@@ -22,7 +20,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.Menu;
 import android.view.View;
 
 public class WelcomeActivity extends AppCompatActivity
@@ -99,10 +96,10 @@ public class WelcomeActivity extends AppCompatActivity
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 
         } else if (id == R.id.aboutUs) {
-            startActivity(new Intent(getApplicationContext(), About_Us.class));
+            startActivity(new Intent(getApplicationContext(), AboutUs.class));
 
         } else if (id == R.id.contactUs) {
-            startActivity(new Intent(getApplicationContext(), Contact_Us.class));
+            startActivity(new Intent(getApplicationContext(), ContactUs.class));
 
         } else if (id == R.id.logout) {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));

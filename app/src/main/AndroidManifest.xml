@@ -14,8 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Contact_Us"></activity>
-        <activity android:name=".view.About_Us" />
+        <activity android:name=".view.AboutUs"
+            android:theme="@style/expenseScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.expensemanager.view.WelcomeActivity" />
+        </activity>
+        <activity android:name=".view.ContactUs" />
         <activity
             android:name=".view.Tab1"
             android:label="Add Categories"
