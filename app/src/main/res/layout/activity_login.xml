@@ -19,7 +19,7 @@
             android:layout_height="40dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/not_a_member_yet"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="19sp" />
 
         <Button
@@ -27,11 +27,12 @@
             android:layout_width="wrap_content"
             android:layout_height="42dp"
             android:background="?android:attr/selectableItemBackground"
-            android:fontFamily="casual"
+            android:fontFamily="sans-serif-condensed"
             android:layout_marginStart="5dp"
             android:text="@string/sign_up"
+            android:textStyle="bold"
             android:padding="5dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="21sp" />
 
     </LinearLayout>
@@ -75,9 +76,9 @@
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:background="@drawable/edittextstyle"
+            android:background="@drawable/buttonstyle"
             android:hint="@string/user_name"
-            android:textColorHint="#ffffff"
+            android:textColorHint="@color/colorPrimary"
             android:padding="5dp"
             android:inputType="textEmailAddress"
             android:textSize="16sp"
@@ -89,10 +90,10 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:id="@+id/txtPass"
-            android:background="@drawable/edittextstyle"
+            android:background="@drawable/buttonstyle"
             android:hint="@string/password"
             android:padding="5dp"
-            android:textColorHint="#ffffff"
+            android:textColorHint="@color/colorPrimary"
 
             android:layout_marginTop="10dp"
             android:inputType="textPassword"

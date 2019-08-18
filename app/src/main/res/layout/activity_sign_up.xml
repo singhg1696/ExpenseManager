@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.SignUpActivity"
-    android:background="@drawable/universal_login">
+    android:background="@drawable/expensebg">
 
     <TextView
         android:gravity="center"
@@ -20,7 +20,7 @@
         android:layout_marginEnd="123dp"
         android:fontFamily="sans-serif-black"
         android:text="Registeration"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorPrimary"
         android:textSize="25dp" />
 
     <LinearLayout
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:id="@+id/txtEmail"
-            android:background="@drawable/edittextstyle"
+            android:background="@drawable/buttonstyle"
             android:hint="@string/e_mail"
             android:padding="5dp"
             android:layout_marginTop="10dp"
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:id="@+id/txtPass"
-            android:background="@drawable/edittextstyle"
+            android:background="@drawable/buttonstyle"
             android:hint="@string/password"
             android:padding="5dp"
             android:layout_marginTop="10dp"
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:id="@+id/txtRepeatPass"
-            android:background="@drawable/edittextstyle"
+            android:background="@drawable/buttonstyle"
             android:hint="@string/re_enter_password"
             android:padding="5dp"
             android:layout_marginTop="10dp"
@@ -107,7 +107,7 @@
             android:layout_height="40dp"
             android:fontFamily="sans-serif-light"
             android:text="@string/already_have_an_account"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="19sp" />
 
         <Button
@@ -119,7 +119,7 @@
             android:layout_marginStart="5dp"
             android:text="@string/sign_in"
             android:padding="5dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="21sp" />
 
     </LinearLayout>
