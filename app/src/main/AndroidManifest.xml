@@ -31,8 +31,18 @@
         <activity
             android:name=".view.Tab1"
             android:label="Add Categories"
-            android:theme="@style/expenseScreen" />
-        <activity android:name=".view.Update_AddExpense" />
+            android:theme="@style/expenseScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.expensemanager.view.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".view.Update_AddExpense"
+            android:theme="@style/expenseScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.expensemanager.view.SettingsActivity" />
+        </activity>
         <activity android:name=".view.SettingsActivity"
             android:theme="@style/expenseScreen">
             <meta-data

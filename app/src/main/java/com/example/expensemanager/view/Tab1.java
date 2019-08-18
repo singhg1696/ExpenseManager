@@ -1,7 +1,5 @@
 package com.example.expensemanager.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -14,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.expensemanager.Classes.Tab1_ListView;
 import com.example.expensemanager.Controllers.Tab1_Adapter;
@@ -35,6 +35,9 @@ public class Tab1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab1);
+        getSupportActionBar().setTitle("Add Expense");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         listView = findViewById(R.id.listAddCategory);
         btnAdd =  findViewById(R.id.btnAddCategory);
@@ -97,10 +100,10 @@ public class Tab1 extends AppCompatActivity {
         dialog.setCancelable(true);
         dialog.setTitle("Update / Delete Category");
         dialog.setContentView(R.layout.edit_category);
-        final EditText editText = (EditText)dialog.findViewById(R.id.editCategory);
+        final EditText editText = dialog.findViewById(R.id.editCategory);
         editText.setText(oldItem);
-        Button btn = (Button)dialog.findViewById(R.id.btnDone);
-        Button delete = (Button)dialog.findViewById(R.id.btnCancelEdit);
+        Button btn = dialog.findViewById(R.id.btnDone);
+        Button delete = dialog.findViewById(R.id.btnCancelEdit);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,7 +128,7 @@ public class Tab1 extends AppCompatActivity {
             public void onClick(View v) {
                 dialog.dismiss();
                 final AlertDialog.Builder dialog1 = new AlertDialog.Builder(Tab1.this)
-                        .setTitle("Delete "+listViews.get(id).getName().toString()+"?")
+                        .setTitle("Delete " + listViews.get(id).getName() + "?")
                         .setMessage("Make sure this item is empty or transferred to other item. Otherwise all data related to this item will be deleted.")
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener(){
                             @Override
@@ -136,7 +139,7 @@ public class Tab1 extends AppCompatActivity {
                                         .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
                                             @Override
                                             public void onClick(DialogInterface dialogDel, int which) {
-                                                String value  = listViews.get(id).getName().toString();
+                                                String value = listViews.get(id).getName();
                                                 String deleted= " is Deleted!";
                                                 dbHelper.deleteCategory(value);
                                                 dbHelper.deleteAddCategory(value);

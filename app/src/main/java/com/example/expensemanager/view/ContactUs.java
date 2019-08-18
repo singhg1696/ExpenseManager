@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -68,12 +69,16 @@ public class ContactUs extends AppCompatActivity {
 
                 final EditText userInput = findViewById(R.id.edittextMessage);
                 final String message = userInput.getText().toString();
+                Log.d("messageMeTo", message);
                 btnsend.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {/*
-                        SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage("6475259586", null, message, null, null);
-                    */}
+                    public void onClick(View view) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.putExtra("address", "6475259586");
+                        intent.putExtra("sms_body", userInput.getText().toString());
+                        intent.setType("vnd.android-dir/mms-sms");
+                        startActivity(intent);
+                    }
                 });
             }
         });

@@ -5,12 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"></include>
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -74,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textLongMessage"
-                android:text="Gurwinder Singh (647*****)"
+                android:text="Gurwinder Singh "
                 android:textAlignment="textStart"
                 android:textColor="#000000"
                 android:textSize="14sp"
@@ -85,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textLongMessage"
-                android:text="Hargun Marya (647*****)"
+                android:text="Hargun Marya "
                 android:textAlignment="textStart"
                 android:textColor="#000000"
                 android:textSize="14sp"
