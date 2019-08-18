@@ -99,10 +99,10 @@ public class WelcomeActivity extends AppCompatActivity
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 
         } else if (id == R.id.aboutUs) {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            startActivity(new Intent(getApplicationContext(), About_Us.class));
 
         } else if (id == R.id.contactUs) {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            startActivity(new Intent(getApplicationContext(), Contact_Us.class));
 
         } else if (id == R.id.logout) {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));

@@ -140,6 +140,7 @@
                 android:layout_marginLeft="80dp"
                 android:layout_alignParentLeft="true"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btnAddExpense"
                 android:background="@drawable/buttonstyle"
                 android:text="CANCEL"
                 android:textColor="#800000" />

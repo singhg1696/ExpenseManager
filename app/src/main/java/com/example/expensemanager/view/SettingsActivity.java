@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import com.example.expensemanager.R;
 
 public class SettingsActivity extends AppCompatActivity {
-    RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,23 +19,14 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
 
 
-        Button btnBack = (Button)findViewById(R.id.btn_settings_back);
-        Button editExpense = (Button)findViewById(R.id.btn_settings_editExp);
-        Button addCategory = (Button)findViewById(R.id.btn_settings_addCat);
-        relativeLayout = (RelativeLayout) findViewById(R.id.content_main);
-        final EditText editText = (EditText)findViewById(R.id.editText_settings);
+        Button editExpense = (Button) findViewById(R.id.btn_settings_editExp);
+        Button addCategory = (Button) findViewById(R.id.btn_settings_addCat);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         editExpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Update_AddExpense.class);
+                Intent i = new Intent(getApplicationContext(), Update_AddExpense.class);
                 startActivity(i);
             }
         });
@@ -44,7 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
         addCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Tab1.class);
+                Intent i = new Intent(getApplicationContext(), Tab1.class);
                 startActivity(i);
             }
         });

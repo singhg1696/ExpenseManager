@@ -3,12 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/expensebg"
     android:weightSum="1">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"></include>
 
 
 
@@ -39,6 +36,7 @@
             android:layout_weight="2.45"
             android:ems="10"
             android:hint="Category Name"
+            android:textColorHint="#000000"
             android:inputType="textPersonName"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="24sp" />
@@ -65,45 +63,51 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:orientation="horizontal"
         android:layout_weight="0.68">
 
         <ListView
             android:id="@+id/listAddCategory"
             android:layout_width="match_parent"
-            android:layout_height="350dp" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCancelAdd"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_alignParentStart="true"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnAddCategory"
+            android:background="@drawable/buttonstyle"
             android:text="CANCEL"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textColor="#800000" />
 
 
         <Button
             android:id="@+id/btnAddCategory"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/buttonstyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_marginRight="80dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="14dp"
-            android:text="ADD"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            android:textStyle="normal|bold" />
+            android:layout_marginBottom="15dp"
+            android:text="Add"
+            android:textColor="#800000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 

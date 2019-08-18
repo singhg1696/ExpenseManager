@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.expensemanager">
 
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.About_Us"></activity>
-        <activity android:name=".view.Tab1"></activity>
+        <activity android:name=".view.Contact_Us"></activity>
+        <activity android:name=".view.About_Us" />
+        <activity
+            android:name=".view.Tab1"
+            android:label="Add Categories"
+            android:theme="@style/expenseScreen" />
         <activity android:name=".view.Update_AddExpense" />
-        <activity android:name=".view.SettingsActivity" />
+        <activity android:name=".view.SettingsActivity"
+            android:theme="@style/expenseScreen"
+            android:label="Settings"></activity>
         <activity
             android:name=".view.Tab2"
             android:theme="@style/expenseScreen">
@@ -24,7 +35,7 @@
         <activity
             android:name=".view.WelcomeActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.SignUpActivity" />
         <activity android:name=".view.LoginActivity" />
         <activity
