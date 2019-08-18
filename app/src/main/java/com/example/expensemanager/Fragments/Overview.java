@@ -43,8 +43,8 @@ public class Overview extends androidx.fragment.app.Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_overview, container, false);
 
-        listView = (ListView) view.findViewById(R.id.list_viewAll);
-        total = (TextView)view.findViewById(R.id.txtAmountOverview);
+        listView = view.findViewById(R.id.list_viewAll);
+        total = view.findViewById(R.id.txtAmountOverview);
         getTotal();
 
         DBHelper db = new DBHelper(getContext());

@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Tab1">
-
-        </activity>
+        <activity android:name=".view.About_Us"></activity>
+        <activity android:name=".view.Tab1"></activity>
         <activity android:name=".view.Update_AddExpense" />
         <activity android:name=".view.SettingsActivity" />
-        <activity android:name=".view.Tab2"
-            android:theme="@style/Theme.AppCompat.DayNight">
+        <activity
+            android:name=".view.Tab2"
+            android:theme="@style/expenseScreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.expensemanager.view.WelcomeActivity" />
@@ -24,20 +24,18 @@
         <activity
             android:name=".view.WelcomeActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".view.SignUpActivity" />
         <activity android:name=".view.LoginActivity" />
-        <activity android:name=".view.SplashActivity"
+        <activity
+            android:name=".view.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

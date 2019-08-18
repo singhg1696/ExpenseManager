@@ -23,10 +23,11 @@
         <menu>
             <item
                 android:id="@+id/aboutUs"
-                android:icon="@drawable/aboutusnav"
+                android:icon="@drawable/contactusnew"
                 android:title="@string/about_us" />
             <item
                 android:id="@+id/contactUs"
+                android:icon="@drawable/aboutusnew"
                 android:title="@string/contact_us" />
 
         </menu>
@@ -35,7 +36,7 @@
         <menu>
             <item
                 android:id="@+id/logout"
-                android:icon="@drawable/logoutnav"
+                android:icon="@drawable/logoutnew"
                 android:title="@string/logout" />
         </menu>
     </item>

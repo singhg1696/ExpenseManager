@@ -7,6 +7,8 @@ import com.example.expensemanager.Fragments.History;
 import com.example.expensemanager.Fragments.Overview;
 import com.example.expensemanager.R;
 
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
@@ -66,27 +68,6 @@ public class WelcomeActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.welcome, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        switch (item.getItemId()) {
-            case R.id.add:
-                startActivity(new Intent(this, LoginActivity.class));
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -111,11 +92,17 @@ public class WelcomeActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
         } else if (id == R.id.Itemcategory) {
-            Intent i = new Intent(getApplicationContext(),Tab1.class);
+            Intent i = new Intent(getApplicationContext(), Tab1.class);
             startActivity(i);
 
         } else if (id == R.id.ItemSettings) {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+
+        } else if (id == R.id.aboutUs) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+
+        } else if (id == R.id.contactUs) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
         } else if (id == R.id.logout) {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));

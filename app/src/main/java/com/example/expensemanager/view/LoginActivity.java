@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         loginPrefsEditor = loginPreferences.edit();
 
         saveLogin = loginPreferences.getBoolean("saveLogin", false);
-        if (saveLogin == true) {
+        if (saveLogin) {
             txtEmail.setText(loginPreferences.getString("username", ""));
             txtPass.setText(loginPreferences.getString("password", ""));
             chkboxRememberMe.setChecked(false);
