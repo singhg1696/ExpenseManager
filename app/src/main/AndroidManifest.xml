@@ -5,11 +5,12 @@
     <uses-permission
         android:name="android.permission.CALL_PHONE"></uses-permission>
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/splash_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -20,15 +21,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.expensemanager.view.WelcomeActivity" />
         </activity>
-        <activity android:name=".view.ContactUs" />
+        <activity
+            android:name=".view.ContactUs"
+            android:theme="@style/expenseScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.expensemanager.view.WelcomeActivity" />
+        </activity>
         <activity
             android:name=".view.Tab1"
             android:label="Add Categories"
             android:theme="@style/expenseScreen" />
         <activity android:name=".view.Update_AddExpense" />
         <activity android:name=".view.SettingsActivity"
-            android:theme="@style/expenseScreen"
-            android:label="Settings"></activity>
+            android:theme="@style/expenseScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.expensemanager.view.WelcomeActivity" />
+        </activity>
         <activity
             android:name=".view.Tab2"
             android:theme="@style/expenseScreen">

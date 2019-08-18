@@ -11,9 +11,6 @@ import com.example.expensemanager.R;
 
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 4/12/2017.
- */
 
 public class Tab1_Adapter extends BaseAdapter {
 
@@ -49,7 +46,7 @@ public class Tab1_Adapter extends BaseAdapter {
 
         View view = View.inflate(context, R.layout.tab1_list, null);
 
-        TextView txtCategoryName = (TextView)view.findViewById(R.id.txtCategoryName);
+        TextView txtCategoryName = view.findViewById(R.id.txtCategoryName);
         txtCategoryName.setText(records.get(position).getName());
 
         return view;

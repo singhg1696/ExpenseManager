@@ -10,7 +10,6 @@
         android:id="@+id/transfer_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
@@ -18,11 +17,10 @@
         android:id="@+id/transfer_txtAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
         android:layout_below="@+id/transfer_spinner"
         android:layout_marginTop="11dp"
-        android:text="TextView"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         tools:text="Amount" />
@@ -31,11 +29,11 @@
         android:id="@+id/transfer_txtDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/transfer_txtAmount"
         android:layout_marginTop="13dp"
-        android:text="Date"
+        android:text="@string/date"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
@@ -43,55 +41,42 @@
         android:id="@+id/transfer_txtNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_marginStart="5dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/transfer_txtDate"
         android:layout_marginTop="11dp"
-        android:text="Note"
+        android:text="@string/note"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/transfer_btnCancel"
         android:layout_width="wrap_content"
+        android:layout_below="@+id/transfer_txtNote"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView18"
-        android:layout_alignParentLeft="true"
+        android:layout_marginStart="80dp"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/textView18"
-        android:layout_toStartOf="@+id/textView18"
-        android:drawableLeft="@mipmap/closel"
-        android:text="Cancel"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/edittextstyle"
         android:textAlignment="center"
+        android:text="@string/cancel"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/transfer_btnSave"
-        android:layout_centerHorizontal="true"
-        android:text="|"
-        android:textAlignment="center"
-        android:textSize="36sp"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/transfer_btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:background="@drawable/edittextstyle"
         android:layout_below="@+id/transfer_txtNote"
         android:layout_marginTop="22dp"
-        android:layout_toEndOf="@+id/textView18"
-        android:layout_toRightOf="@+id/textView18"
-        android:drawableLeft="@android:drawable/ic_menu_save"
-        android:text="Save"
+        android:text="@string/save"
         android:textAlignment="center"
-        android:textColor="@android:color/background_light"
+        android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold" />
 </RelativeLayout>

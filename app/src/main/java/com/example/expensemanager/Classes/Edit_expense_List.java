@@ -1,8 +1,5 @@
 package com.example.expensemanager.Classes;
 
-/**
- * Created by Techsoft - 001 on 4/22/2017.
- */
 
 public class Edit_expense_List {
     private int id;

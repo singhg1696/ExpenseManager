@@ -1,9 +1,5 @@
 package com.example.expensemanager.Classes;
 
-/**
- * Created by Techsoft - 001 on 5/11/2017.
- */
-
 public class List_All {
     private int id;
     private String name;

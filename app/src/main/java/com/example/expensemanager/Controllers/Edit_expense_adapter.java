@@ -11,9 +11,7 @@ import com.example.expensemanager.R;
 
 import java.util.List;
 
-/**
- * Created by Techsoft - 001 on 4/22/2017.
- */
+
 
 public class Edit_expense_adapter extends BaseAdapter {
     Context context;
@@ -44,10 +42,10 @@ public class Edit_expense_adapter extends BaseAdapter {
 
         View view = View.inflate(context, R.layout.edit_expense_list, null);
 
-        TextView name = (TextView)view.findViewById(R.id.txtedit_expense_name);
-        TextView amount = (TextView)view.findViewById(R.id.txtedit_expense_amount);
-        TextView date = (TextView)view.findViewById(R.id.txtedit_expense_date);
-        TextView note = (TextView)view.findViewById(R.id.txtedit_expense_note);
+        TextView name = view.findViewById(R.id.txtedit_expense_name);
+        TextView amount = view.findViewById(R.id.txtedit_expense_amount);
+        TextView date = view.findViewById(R.id.txtedit_expense_date);
+        TextView note = view.findViewById(R.id.txtedit_expense_note);
 
 
         name.setText(lists.get(position).getName());

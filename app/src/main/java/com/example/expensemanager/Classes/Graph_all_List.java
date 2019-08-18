@@ -1,8 +1,5 @@
 package com.example.expensemanager.Classes;
 
-/**
- * Created by Techsoft-003 on 3/30/2017.
- */
 
 public class Graph_all_List {
     private int id;

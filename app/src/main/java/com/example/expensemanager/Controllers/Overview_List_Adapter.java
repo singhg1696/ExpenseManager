@@ -13,9 +13,7 @@ import com.example.expensemanager.R;
 import java.text.DecimalFormat;
 import java.util.List;
 
-/**
- * Created by Techsoft-003 on 3/15/2017.
- */
+
 
 public class Overview_List_Adapter extends BaseAdapter {
     Context context;
@@ -44,9 +42,9 @@ public class Overview_List_Adapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View view = View.inflate(context, R.layout.overview_list, null);
-        TextView txtName = (TextView) view.findViewById(R.id.txtOverview_name);
-        TextView txtAmount = (TextView) view.findViewById(R.id.txtOverview_amount);
-        ProgressBar progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
+        TextView txtName = view.findViewById(R.id.txtOverview_name);
+        TextView txtAmount = view.findViewById(R.id.txtOverview_amount);
+        ProgressBar progressBar = view.findViewById(R.id.progressBar);
 
         txtName.setText(listOverview.get(position).getName());
         DecimalFormat precision = new DecimalFormat("0.00");

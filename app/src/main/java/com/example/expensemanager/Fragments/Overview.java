@@ -1,30 +1,24 @@
 package com.example.expensemanager.Fragments;
 
 
-import android.app.Fragment;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.expensemanager.Classes.Overview_ListView;
+import com.example.expensemanager.Controllers.Overview_List_Adapter;
 import com.example.expensemanager.R;
 import com.example.expensemanager.SQLDatabase.DBHelper;
-import com.example.expensemanager.Controllers.Overview_List_Adapter;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class Overview extends androidx.fragment.app.Fragment {
 
     private ListView listView;

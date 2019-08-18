@@ -1,8 +1,5 @@
 package com.example.expensemanager.Classes;
 
-/**
- * Created by Techsoft-003 on 3/15/2017.
- */
 
 public class Overview_ListView {
     private int id;

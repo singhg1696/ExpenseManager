@@ -1,8 +1,5 @@
 package com.example.expensemanager.Classes;
 
-/**
- * Created by Techsoft - 001 on 4/12/2017.
- */
 
 public class Tab1_ListView {
     private int id;

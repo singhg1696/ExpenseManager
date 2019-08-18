@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Expense Manager</string>
     <string name="fire">OK</string>
-    <string name="cancel">Cancel</string>
     <string name="sign_up">Sign Up</string>
     <string name="App_Name">All in One</string>
     <string name="App_Name_Part">Expense Manager</string>
@@ -126,4 +125,8 @@
 
     <string name="copy_right" translatable="false">Copyrights © %1$d</string>
     <string name="expense_manager_application_is_mainly_in_use_to_calculate_daily_life_expenses_of_any_user_one_can_add_categories_add_and_edit_expenses_here_and_see_the_list_of_expenses_still_this_application_is_limited_to_smaller_scale_it_will_be_updated_soon_with_more_features">Expense Manager application is mainly in use to calculate daily life expenses of any user .One can add categories , add and edit expenses here and see the list of expenses. Still,this application is limited to smaller scale.It will be updated soon with more features.</string>
+    <string name="note">Note</string>
+    <string name="save">Save</string>
+    <string name="date">Date</string>
+    <string name="cancel">Cancel</string>
 </resources>

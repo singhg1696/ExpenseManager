@@ -25,6 +25,9 @@ public class ContactUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitycontactus);
+        getSupportActionBar().setTitle("Expense Manager");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
         btnCall = findViewById(R.id.btncallaboutus);
         btnMessage = findViewById(R.id.btntextaboutus);
         btnsend = findViewById(R.id.btnsendmessage);
