@@ -73,23 +73,28 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <EditText
-            android:id="@+id/txtEmail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:autofillHints="@string/user_name"
-            android:background="@drawable/buttonstyle"
-            android:hint="@string/user_name"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="@color/login"
-            android:textColorHint="@color/loginhint"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content">
 
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:autofillHints="@string/user_name"
+                android:background="@drawable/buttonstyle"
+                android:hint="@string/user_name"
+                android:inputType="textEmailAddress"
+                android:padding="5dp"
+                android:textColor="@color/login"
+                android:textColorHint="@color/loginhint"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             app:passwordToggleDrawable="@drawable/icon_selector"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/colorAccent">
