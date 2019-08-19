@@ -22,7 +22,7 @@ import com.example.expensemanager.SQLDatabase.DBHelper;
 
 import java.util.List;
 
-public class Tab1 extends AppCompatActivity {
+public class AddCategoryActivity extends AppCompatActivity {
     ListView listView;
     Button btnAdd;
     Button cancel;
@@ -35,7 +35,7 @@ public class Tab1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab1);
-        getSupportActionBar().setTitle("Add Expense");
+        getSupportActionBar().setTitle("Add Category");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -96,7 +96,7 @@ public class Tab1 extends AppCompatActivity {
     }
 
     public void showEditBox(final String oldItem, final Integer id){
-        final Dialog dialog = new Dialog(Tab1.this);
+        final Dialog dialog = new Dialog(AddCategoryActivity.this);
         dialog.setCancelable(true);
         dialog.setTitle("Update / Delete Category");
         dialog.setContentView(R.layout.edit_category);
@@ -117,7 +117,7 @@ public class Tab1 extends AppCompatActivity {
                 editText.setText("");
                 db.updateCategory(ids,Category_name);
 
-                Toast.makeText(Tab1.this, "Category name edited to "+ Category_name, Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddCategoryActivity.this, "Category name edited to " + Category_name, Toast.LENGTH_SHORT).show();
                 loadListView();
                 dialog.dismiss();
 
@@ -127,14 +127,14 @@ public class Tab1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
-                final AlertDialog.Builder dialog1 = new AlertDialog.Builder(Tab1.this)
+                final AlertDialog.Builder dialog1 = new AlertDialog.Builder(AddCategoryActivity.this)
                         .setTitle("Delete " + listViews.get(id).getName() + "?")
                         .setMessage("Make sure this item is empty or transferred to other item. Otherwise all data related to this item will be deleted.")
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener(){
                             @Override
                             public void onClick(DialogInterface dialog1, int which) {
                                 dialog1.dismiss();
-                                final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(Tab1.this)
+                                final AlertDialog.Builder dialogDelete = new AlertDialog.Builder(AddCategoryActivity.this)
                                         .setMessage("Are you sure you want to delete this item?")
                                         .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
                                             @Override
@@ -146,7 +146,7 @@ public class Tab1 extends AppCompatActivity {
                                                 tab1_adapter.notifyDataSetChanged();
                                                 loadListView();
 
-                                                Toast.makeText(Tab1.this,"Category  " +value +deleted , Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(AddCategoryActivity.this, "Category  " + value + deleted, Toast.LENGTH_SHORT).show();
 
                                                 dialogDel.dismiss();
 
@@ -177,7 +177,7 @@ public class Tab1 extends AppCompatActivity {
                                     InputMethodManager i = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                                     i.hideSoftInputFromWindow(editText.getWindowToken(), 0);
 
-                                    Toast.makeText(Tab1.this, value + " Successfully moved to Archive", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(AddCategoryActivity.this, value + " Successfully moved to Archive", Toast.LENGTH_SHORT).show();
 
                                     loadListView();
                                     */

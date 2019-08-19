@@ -15,7 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-        getSupportActionBar().setTitle("Expense Manager");
+        getSupportActionBar().setTitle("Settings");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -35,7 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
         addCategory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Tab1.class);
+                Intent i = new Intent(getApplicationContext(), AddCategoryActivity.class);
                 startActivity(i);
             }
         });

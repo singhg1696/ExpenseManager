@@ -29,7 +29,7 @@
                 android:value="com.example.expensemanager.view.WelcomeActivity" />
         </activity>
         <activity
-            android:name=".view.Tab1"
+            android:name=".view.AddCategoryActivity"
             android:label="Add Categories"
             android:theme="@style/expenseScreen">
             <meta-data
@@ -50,7 +50,7 @@
                 android:value="com.example.expensemanager.view.WelcomeActivity" />
         </activity>
         <activity
-            android:name=".view.Tab2"
+            android:name=".view.AddExpenseCategory"
             android:theme="@style/expenseScreen">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

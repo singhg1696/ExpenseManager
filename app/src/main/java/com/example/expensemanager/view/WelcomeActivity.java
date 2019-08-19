@@ -2,25 +2,20 @@ package com.example.expensemanager.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.expensemanager.Fragments.History;
 import com.example.expensemanager.Fragments.Overview;
 import com.example.expensemanager.R;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-
-import android.view.MenuItem;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
 
 public class WelcomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,7 +30,7 @@ public class WelcomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Tab2.class));
+                startActivity(new Intent(getApplicationContext(), AddExpenseCategory.class));
 
             }
         });
@@ -89,7 +84,7 @@ public class WelcomeActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
         } else if (id == R.id.Itemcategory) {
-            Intent i = new Intent(getApplicationContext(), Tab1.class);
+            Intent i = new Intent(getApplicationContext(), AddCategoryActivity.class);
             startActivity(i);
 
         } else if (id == R.id.ItemSettings) {

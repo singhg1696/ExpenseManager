@@ -1,11 +1,11 @@
 package com.example.expensemanager.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.expensemanager.R;
 
@@ -20,7 +20,7 @@ public class AboutUs extends AppCompatActivity {
         idWebView = findViewById(R.id.idWebView);
 
 
-        getSupportActionBar().setTitle("Expense Manager");
+        getSupportActionBar().setTitle("About our Application");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         idWebView.getSettings().setJavaScriptEnabled(true);

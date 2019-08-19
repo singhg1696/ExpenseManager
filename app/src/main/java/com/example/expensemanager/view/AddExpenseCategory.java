@@ -5,7 +5,6 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,14 +15,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.example.expensemanager.R;
 import com.example.expensemanager.SQLDatabase.DBHelper;
@@ -32,10 +27,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class Tab2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class AddExpenseCategory extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     EditText amount_add;
@@ -77,7 +69,7 @@ public class Tab2 extends AppCompatActivity implements AdapterView.OnItemSelecte
         getSupportActionBar().setHomeButtonEnabled(true);
 
         alertDialogBuilder.setView(promptsView);
-        final EditText userInput = (EditText) promptsView
+        final EditText userInput = promptsView
                 .findViewById(R.id.editTextDialog);
 
         alertDialogBuilder
@@ -106,7 +98,7 @@ public class Tab2 extends AppCompatActivity implements AdapterView.OnItemSelecte
                 View promptsView = li.inflate(R.layout.prompts, null);
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
                 alertDialogBuilder.setView(promptsView);
-                final EditText userInput = (EditText) promptsView
+                final EditText userInput = promptsView
                         .findViewById(R.id.editTextDialog);
 
                 alertDialogBuilder
@@ -169,7 +161,7 @@ public class Tab2 extends AppCompatActivity implements AdapterView.OnItemSelecte
                     InputMethodManager imm_note = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     imm_note.hideSoftInputFromWindow(note.getWindowToken(), 0);
-                    Toast.makeText(Tab2.this, "New Expense Added!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddExpenseCategory.this, "New Expense Added!", Toast.LENGTH_LONG).show();
 
                     for (int i = 0; i < category_add.length(); i++) ;
                     if (category_add == null) {

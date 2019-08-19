@@ -1,7 +1,5 @@
 package com.example.expensemanager.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -17,6 +15,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.expensemanager.Classes.Edit_expense_List;
 import com.example.expensemanager.Controllers.Edit_expense_adapter;
@@ -39,9 +39,11 @@ public class Update_AddExpense extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Edit Expense");
+
         setContentView(R.layout.activity_update__add_expense);
-        listView = (ListView) findViewById(R.id.listView_edit_expense);
-        btnBack = (Button) findViewById(R.id.btnBack);
+        listView = findViewById(R.id.listView_edit_expense);
+        btnBack = findViewById(R.id.btnBack);
 
         loadListView();
 
@@ -62,10 +64,10 @@ public class Update_AddExpense extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String name = listExpense.get(position).getName().toString();
-                String amount = listExpense.get(position).getAmount().toString();
-                String date = listExpense.get(position).getDate().toString();
-                String note = listExpense.get(position).getNote().toString();
+                String name = listExpense.get(position).getName();
+                String amount = listExpense.get(position).getAmount();
+                String date = listExpense.get(position).getDate();
+                String note = listExpense.get(position).getNote();
                 ids = listExpense.get(position).getId();
 
                 ShowDialogBox(name, amount, date, note,  position);
@@ -80,7 +82,7 @@ public class Update_AddExpense extends AppCompatActivity {
         transferDialog.setCancelable(true);
         transferDialog.setTitle("Transfer Item to:");
         transferDialog.setContentView(R.layout.transfer_item);
-        final Spinner spinner = (Spinner)transferDialog.findViewById(R.id.transfer_spinner);
+        final Spinner spinner = transferDialog.findViewById(R.id.transfer_spinner);
 
         final DBHelper dbHelper = new DBHelper(getApplicationContext());
         List<String> labels = dbHelper.getAllCategory();
@@ -88,14 +90,14 @@ public class Update_AddExpense extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinner.setAdapter(dataAdapter);
 
-        final TextView txtAmount = (TextView)transferDialog.findViewById(R.id.transfer_txtAmount);
+        final TextView txtAmount = transferDialog.findViewById(R.id.transfer_txtAmount);
         txtAmount.setText(ItemAmount);
-        final TextView txtDate = (TextView)transferDialog.findViewById(R.id.transfer_txtDate);
+        final TextView txtDate = transferDialog.findViewById(R.id.transfer_txtDate);
         txtDate.setText(ItemDate);
-        final TextView txtNote = (TextView)transferDialog.findViewById(R.id.transfer_txtNote);
+        final TextView txtNote = transferDialog.findViewById(R.id.transfer_txtNote);
         txtNote.setText(ItemNote);
-        Button btnSave = (Button)transferDialog.findViewById(R.id.transfer_btnSave);
-        Button btnCancel = (Button)transferDialog.findViewById(R.id.transfer_btnCancel);
+        Button btnSave = transferDialog.findViewById(R.id.transfer_btnSave);
+        Button btnCancel = transferDialog.findViewById(R.id.transfer_btnCancel);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,18 +133,18 @@ public class Update_AddExpense extends AppCompatActivity {
         dialog.setCancelable(true);
         dialog.setTitle("Update / Delete Expense");
         dialog.setContentView(R.layout.edit_expense_in_history);
-        final TextView del_id = (TextView) dialog.findViewById(R.id.txtID);
+        final TextView del_id = dialog.findViewById(R.id.txtID);
         del_id.setText(""+ids);
-        final TextView editText = (TextView) dialog.findViewById(R.id.editCatName);
+        final TextView editText = dialog.findViewById(R.id.editCatName);
         editText.setText(ItemName);
-        final EditText editAmount = (EditText) dialog.findViewById(R.id.editCatAmount);
+        final EditText editAmount = dialog.findViewById(R.id.editCatAmount);
         editAmount.setText(ItemAmount);
-        final EditText editDate = (EditText)dialog.findViewById(R.id.editCatDate);
+        final EditText editDate = dialog.findViewById(R.id.editCatDate);
         editDate.setText(ItemDate);
-        final EditText editNote = (EditText) dialog.findViewById(R.id.editCatNote);
+        final EditText editNote = dialog.findViewById(R.id.editCatNote);
         editNote.setText(ItemNote);
-        Button btn = (Button) dialog.findViewById(R.id.btnCatEdit);
-        final Button delete = (Button) dialog.findViewById(R.id.btnCatCancel);
+        Button btn = dialog.findViewById(R.id.btnCatEdit);
+        final Button delete = dialog.findViewById(R.id.btnCatCancel);
 
 
         editDate.setOnClickListener(new View.OnClickListener() {
@@ -196,8 +198,8 @@ public class Update_AddExpense extends AppCompatActivity {
                 dialog.dismiss();
                 final AlertDialog.Builder dialog1 = new AlertDialog.Builder(Update_AddExpense.this)
                         .setTitle("Delete / Transfer Items")
-                        .setMessage("Do you want delete this Items?" + "\n" + "Id: "+ ids + "\n" +"Name :  " + listExpense.get(id).getName().toString() + "\n" + "Amount :  " + listExpense.get(id).getAmount() + "\n" +
-                                "Date :  " + listExpense.get(id).getDate().toString() + "\n" + "Note :  " + listExpense.get(id).getNote().toString() + "\n" + "" + "\n" +
+                        .setMessage("Do you want delete this Items?" + "\n" + "Id: " + ids + "\n" + "Name :  " + listExpense.get(id).getName() + "\n" + "Amount :  " + listExpense.get(id).getAmount() + "\n" +
+                                "Date :  " + listExpense.get(id).getDate() + "\n" + "Note :  " + listExpense.get(id).getNote() + "\n" + "" + "\n" +
                                 "Or do you want to transfer this data to another Category?")
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                             @Override
@@ -209,7 +211,7 @@ public class Update_AddExpense extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
 
-                                                String name = listExpense.get(id).getName().toString();
+                                                String name = listExpense.get(id).getName();
                                                 String deleted = "deleted!";
 
                                                 dbHelper.deleteAddExpense(ids);
