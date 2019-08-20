@@ -1,7 +1,5 @@
 # ExpenseManager
-Initial Commit
-| Serial Number  | Screenshots        | Description |
-| :---           |     :---:          |          ---: |
+
 | 1 | <img src="https://user-images.githubusercontent.com/50931443/63235583-13400380-c208-11e9-976c-cfc258c99ea7.png" width="250" /> | 
 
 
